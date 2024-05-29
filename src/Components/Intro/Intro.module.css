@@ -1,0 +1,17 @@
+.intro {
+    display: flex;
+    flex-direction: column;
+    width:100%;
+}
+
+.intro h3 {
+    font-size: 3rem;
+}
+
+.intro span{
+    font-size: 1.2rem;
+}
+.zilla{
+    width: 580px;
+    min-height: 120px;
+}

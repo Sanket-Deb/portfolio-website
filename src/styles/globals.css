@@ -4,6 +4,7 @@
 
 :root {
  scroll-behavior: smooth;
+
 }
 
 @media (prefers-color-scheme: dark) {
@@ -14,5 +15,59 @@
 
 body {
 
+}
+
+
+body {
+  /* background-color: #000; */
+  overflow: hidden;
+}
+
+.northern-lights {
+  width: 100vw;
+  height: 100vh;
+  position: absolute;
+  overflow: hidden;
+  top: 0;
+  z-index: -1;
+}
+
+@keyframes aurora {
+  0% {
+    transform: translateX(0) translateY(0);
+    opacity: 0;
+  }
+  25%{
+    opacity: 1;
+  }
+  50% {
+    transform: translateX(-10%) translateY(10%);
+  }
+  100% {
+    transform: translateX(0) translateY(0);
+  }
+}
+
+.lightOn {
+  position: absolute;
+  width: 200%;
+  height: 200%;
+  background: linear-gradient(45deg, rgba(0, 255, 255, 0.696), rgba(190, 255, 141, 0.629), rgba(255, 247, 164, 0.322));
+  opacity: 0.6;
+  filter: blur(100px);
+  transition: 0.4s ease;
+  animation: aurora infinite linear;
+}
+
+.lightOn:nth-child(2) {
+  transition: 0.4s ease;
+  animation-duration: 5s;
+  opacity: 0.8;
+}
+
+.lightOn:nth-child(3) {
+  transition: 0.4s ease;
+  animation-duration: 10s;
+  opacity: 0.6;
 }
 
