@@ -1,6 +1,7 @@
-
+import AutoPlayAudio from "@/Components/Audio/AutoPlayAudio";
 import NavBar from "../Components/NavBar/NavBar";
 import SplineApp from "../Components/SplineApp/SplineApp";
+import Profile from "@/Components/Profile/Profile";
 
 
 
@@ -8,8 +9,9 @@ import SplineApp from "../Components/SplineApp/SplineApp";
 export default function Home() {
   return (
     <>
+    <AutoPlayAudio src={'./audio/mujix.mp3'}/>
       <NavBar/>
-      <SplineApp/>
+      <Profile />
     </>
   );
 }
