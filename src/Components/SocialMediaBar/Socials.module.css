@@ -1,0 +1,18 @@
+.icons {
+    display: flex;
+    position: relative;
+    gap: 1rem;
+    justify-content: flex-start;
+    align-items: center;
+    width:max-content;
+    /* pointer-events: none; */
+}
+.overlay{
+    border-radius: 10px;
+    position: absolute; /* Position the overlay */
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent gray color */
+}

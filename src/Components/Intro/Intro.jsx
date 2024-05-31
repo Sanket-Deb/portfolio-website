@@ -2,6 +2,7 @@ import React, { useEffect } from 'react';
 import styles from './Intro.module.css'
 import Typewriter from 'typewriter-effect';
 import { Zilla_Slab } from 'next/font/google';
+import Socials from '../SocialMediaBar/Socials';
 
 const zilla=Zilla_Slab({
     weight:'400',
@@ -21,10 +22,11 @@ const Intro = () => {
               autoStart: true,
               loop: false,
               deleteSpeed:Infinity,
-              delay: 10,
+              delay: 30,
               }}
           />
         </div>
+        <Socials/>
     </div>
   )
 }
