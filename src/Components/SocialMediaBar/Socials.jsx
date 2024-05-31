@@ -3,10 +3,11 @@ import Image from 'next/image'
 import styles from './Socials.module.css'
 
 const Socials = () => {
-    const linkedin_icon = '/images/icons8-linkedin.gif'
-    const github_icon = '/images/icons8-github.gif'
-    const instagram_icon = '/images/icons8-instagram.gif'
-    const whatsapp_icon = '/images/icons8-whatsapp.gif'
+
+    const linkedin_icon = './images/icons8-linkedin.svg'
+    const github_icon = './images/icons8-github.svg'
+    const instagram_icon = './images/icons8-instagram.svg'
+    const whatsapp_icon = './images/icons8-whatsapp.svg'
   return (
     <div id="socials-container" style={{opacity:0.4}} className={styles.icons} title="Find a way to unlock me 😁">
         <a href="https://www.linkedin.com/in/sanket-deb-7a7669196/" target="_blank" rel="noopener noreferrer">
@@ -22,9 +23,7 @@ const Socials = () => {
         </a>
         <a href=" https://wa.me/919599694710?text=Hi, I just stumbled upon your portfolio and would like to connect further!" target="_blank" rel="noopener noreferrer">
             <Image src={whatsapp_icon} height={40} width={40} alt="Whatsapp-profile"/>
-        </a>
-        {/* <div title="Find a way to unlock me 😁" className={styles.overlay}></div> */}
- 
+        </a> 
     </div>
   )
 }
