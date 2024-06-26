@@ -1,12 +1,12 @@
 .navBar {
     display: flex;
-    justify-content: space-around;
+    justify-content: space-between;
     align-items: center;
-    padding: 0 10rem 0 10rem;
     font-weight: lighter;
     gap: 2rem;
     height: 15vh;
     color: black;
+    margin-bottom: 4rem;
 }
 
 .navBar a:hover{

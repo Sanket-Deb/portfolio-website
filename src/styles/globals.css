@@ -13,20 +13,17 @@
   }
 }
 
-body {
-
-}
-
 
 body {
   /* background-color: #000; */
   overflow: hidden;
+  padding: 0 15rem 0 15rem;
 }
 
 .northern-lights {
-  width: 100vw;
-  height: 100vh;
-  position: absolute;
+  width: 100%;
+  height: 100%;
+  position: fixed;
   overflow: hidden;
   top: 0;
   z-index: -1;
@@ -49,7 +46,7 @@ body {
 }
 
 .lightOn {
-  position: absolute;
+  position: fixed;
   width: 200%;
   height: 200%;
   background: linear-gradient(45deg, rgba(0, 255, 255, 0.696), rgba(190, 255, 141, 0.629), rgba(255, 247, 164, 0.322));

@@ -2,6 +2,7 @@ import AutoPlayAudio from "@/Components/Audio/AutoPlayAudio";
 import NavBar from "../Components/NavBar/NavBar";
 import SplineApp from "../Components/SplineApp/SplineApp";
 import Profile from "@/Components/Profile/Profile";
+import Socials from "@/Components/SocialMediaBar/Socials";
 
 
 

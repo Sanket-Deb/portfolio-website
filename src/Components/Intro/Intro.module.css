@@ -2,6 +2,8 @@
     display: flex;
     flex-direction: column;
     width:100%;
+    font-weight: 700;
+    margin-top: 40px;
 }
 
 .intro h3 {
@@ -14,4 +16,5 @@
 .zilla{
     width: 580px;
     min-height: 120px;
+    font-weight: 500;
 }
