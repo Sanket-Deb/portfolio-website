@@ -1,10 +1,12 @@
-import React, { useEffect, useState } from 'react'
+import React, { useEffect, useRef, useState } from 'react'
 import Image from 'next/image';
 import styles from './Profile.module.css';
 import Intro from '../Intro/Intro';
 
 const Profile = () => {
-    const [audio, setAudio] = useState(false)
+    const [audio, setAudio] = useState(false);
+    const [isLocked, setIsLocked] = useState(true);
+    const lockSoundRef = useRef(null);
     const img_src = '/images/bitmojiNew.png';
     useEffect(() => {
       const playButton = document.getElementById('audio-play');
@@ -32,18 +34,22 @@ const Profile = () => {
     }, [audio]);
   return (
     <>
+
+    
   <div className="northern-lights">
     <div id="aurora"></div>
     <div id="aurora"></div>
     <div id="aurora"></div>
   </div>
     <div className={styles.pfp}>
-      <button  id='clickMe' className={styles.clickMe} onClick={()=>{setAudio(!audio)}}>Kyu nehi bol rahe ho 😒</button>
+      <button  id='clickMe' className={styles.clickMe} onClick={()=>{setAudio(!audio); setIsLocked(!isLocked);lockSoundRef.current.play();}}>Kyu nehi bol rahe ho 😒</button>
           <Image src={img_src} height={500} width={500} alt="ProfilePic" id="profileImg"  />
-        <Intro/>
+        <Intro isLocked={isLocked} setIsLocked={setIsLocked} lockSoundRef={lockSoundRef} />
     </div>
     </>
   )
 }
 
 export default Profile
+
+ 

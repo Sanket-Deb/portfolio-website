@@ -11,7 +11,7 @@ const zilla=Zilla_Slab({
     display:'swap'
 })
 
-const Intro = () => {
+const Intro = ({isLocked, setIsLocked, lockSoundRef}) => {
   return (
     <div className={styles.intro}>
         <h3>Hello There!</h3><br/>
@@ -26,7 +26,7 @@ const Intro = () => {
               }}
           />
         </div>
-        <Socials/>
+        <Socials isLocked={isLocked} setIsLocked={setIsLocked} lockSoundRef={lockSoundRef}/>
     </div>
   )
 }
