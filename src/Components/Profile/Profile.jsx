@@ -1,18 +1,20 @@
-import React, { useEffect, useState } from 'react'
+import React, { useEffect, useRef, useState } from 'react'
 import Image from 'next/image';
 import styles from './Profile.module.css';
 import Intro from '../Intro/Intro';
 
 const Profile = () => {
-    const [audio, setAudio] = useState(false)
-    const img_src = '/images/bitmojii.png';
+    const [audio, setAudio] = useState(false);
+    const [isLocked, setIsLocked] = useState(true);
+    const lockSoundRef = useRef(null);
+    const img_src = '/images/bitmojiNew.png';
     useEffect(() => {
       const playButton = document.getElementById('audio-play');
       const pauseButton = document.getElementById('audio-pause');
 
       document.getElementById('profileImg').addEventListener('mouseover', function(event) {
         // Your code to be executed when mouse is hovered over the element
-        document.getElementById('clickMe').style.left = '600px';
+        document.getElementById('clickMe').style.top = '427px';
       });
       
       if (audio) {
@@ -23,26 +25,24 @@ const Profile = () => {
       } else {
         if (pauseButton) pauseButton.click();
         document.querySelectorAll('#aurora').forEach(element => element.classList.remove('lightOn'));
-        document.getElementById('clickMe').style.left = '250px';
+        document.getElementById('clickMe').style.top = '397px';
+        document.getElementById('clickMe').style.zIndex = '1';
         setTimeout(()=>{
-          document.getElementById('clickMe').textContent = 'Kyu nehi bol rahe ho 😒';
+          document.getElementById('clickMe').textContent = 'Kyu nehi bol rahe ho 🤐';
         },500)
       }
     }, [audio]);
   return (
     <>
-  <div className="northern-lights">
-    <div id="aurora"></div>
-    <div id="aurora"></div>
-    <div id="aurora"></div>
-  </div>
-    <div className={styles.pfp}>
-      <button  id='clickMe' className={styles.clickMe} onClick={()=>{setAudio(!audio)}}>Kyu nehi bol rahe ho 😒</button>
-        <Image src={img_src} height={500} width={500} alt="ProfilePic" id="profileImg"/>
-        <Intro/>
+    <div id='home' className={styles.pfp}>
+      <button  id='clickMe' className={styles.clickMe} onClick={()=>{setAudio(!audio); setIsLocked(!isLocked);lockSoundRef.current.play();}}>Kyu nehi bol rahe ho 😒</button>
+          <Image src={img_src} height={500} width={500} alt="ProfilePic" id="profileImg"  />
+        <Intro isLocked={isLocked} setIsLocked={setIsLocked} lockSoundRef={lockSoundRef} />
     </div>
     </>
   )
 }
 
 export default Profile
+
+ 

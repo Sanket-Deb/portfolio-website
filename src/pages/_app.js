@@ -1,5 +1,6 @@
 import "@/styles/globals.css";
-import { Roboto } from 'next/font/google'
+import { Roboto } from 'next/font/google';
+import NavBar from "../Components/NavBar/NavBar";
 
 const roboto = Roboto ({
   subsets: ['latin'],
@@ -8,8 +9,11 @@ const roboto = Roboto ({
 
 export default function App({ Component, pageProps }) {
   return (
-    <main className={roboto.className}>
+    <>
+    <NavBar/>
+    <main id="main" className={roboto.className}>
        <Component {...pageProps}/>
     </main>
+    </>
   );
 }

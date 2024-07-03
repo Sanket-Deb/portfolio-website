@@ -14,7 +14,7 @@ const AutoPlayAudio = ({ src }) => {
     <div style={{display:'none'}}>
         <button onClick={handlePlay}  id={'audio-play'}>Play Audio</button>
         <button onClick={handlePause} id={'audio-pause'}>Pause Audio</button>
-        <audio id="myAudio"  controls autoPlay={'autoplay'} ref={audioRef}>
+        <audio id="myAudio"  controls  ref={audioRef}>
             <source src={src} type="audio/mpeg"/>
         </audio>
     </div>
