@@ -3,9 +3,9 @@ import styles from './NavBar.module.css'
 
 const NavBar = () => {
   return (
-    <nav className={styles.navBar}>
-    <a href="">HOME</a> 
-    <a href="">ABOUT</a>
+    <nav id='home' className={styles.navBar}>
+    <a href="#home">HOME</a> 
+    <a href="#about">ABOUT</a>
     <a href="">PROJECTS</a> 
     <a href="">CONTACT</a> 
     </nav>

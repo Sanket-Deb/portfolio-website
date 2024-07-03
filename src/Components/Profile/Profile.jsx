@@ -34,14 +34,7 @@ const Profile = () => {
     }, [audio]);
   return (
     <>
-
-    
-  <div className="northern-lights">
-    <div id="aurora"></div>
-    <div id="aurora"></div>
-    <div id="aurora"></div>
-  </div>
-    <div className={styles.pfp}>
+    <div id='home' className={styles.pfp}>
       <button  id='clickMe' className={styles.clickMe} onClick={()=>{setAudio(!audio); setIsLocked(!isLocked);lockSoundRef.current.play();}}>Kyu nehi bol rahe ho 😒</button>
           <Image src={img_src} height={500} width={500} alt="ProfilePic" id="profileImg"  />
         <Intro isLocked={isLocked} setIsLocked={setIsLocked} lockSoundRef={lockSoundRef} />
