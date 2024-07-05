@@ -29,7 +29,7 @@ const Socials = ({isLocked= true, setIsLocked, lockSoundRef}) => {
 
     return (
         <div className={styles.container}>
-            <Tooltip title={isLocked?"Find a way to unlock me 😁" : "Unlocked! 😎"}>
+            <Tooltip title={isLocked?"Find a way to unlock me 😁" : ""}>
             <div id="socials-container" style={{ opacity: isLocked ? 0.4 : 1 }} className={styles.icons} >
                 <a href="https://www.linkedin.com/in/sanket-deb-7a7669196/" target="_blank" rel="noopener noreferrer" className={styles.anchor}>
                     <button disabled={isLocked}>

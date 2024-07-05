@@ -12,7 +12,7 @@ const zilla=Zilla_Slab({
 })
 
 const About = () => {
-    const abt_img = '/images/bitmoji_about.jpg';
+    const abt_img = '/images/bitmoji_about.png';
 
   return (
     <>
@@ -24,7 +24,7 @@ const About = () => {
                 I am <span className={styles.highlight}>Sanket Deb</span> a fresh graduate in Computer and Communication Engineering from looking to contribute and grow in technology. Currently, I am immersing myself in web development, mastering HTML, CSS, JavaScript and React <br/> <span className={styles.highlight}>(All things frontend)</span> and gradually venturing into backend development. But why, right? Why am I trying to get into tech when there are many better and more experienced engineers out there (espesially now)? <br/>
                 The answer is, <br/>
                 <span className={styles.highlight}>I just love using tech as a user,</span> as a consumer of the end product, from Google to Instagram to ChatGPT and all the other products out there. We are living in an era of rapid innovation and unparalleled creativity like never before, and my goal is to be a part of this revolution. Even though I might not be the best developer yet to be at the forefront of it all, still I want to be on the sidelines to witness these exciting advancements.
-                <span className={styles.highlight}>Can't wait to make my contibution in this</span>
+                <span className={styles.highlight}>Can't wait to make my contibution</span>
             </span> <br/>
             <a download href="/assets/SANKETDEB_CV.pdf" target="_blank" className={styles.DownloadBtn}>
                 Download Resume!  
