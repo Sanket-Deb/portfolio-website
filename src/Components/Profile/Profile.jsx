@@ -28,7 +28,7 @@ const Profile = () => {
         document.getElementById('clickMe').style.top = '397px';
         document.getElementById('clickMe').style.zIndex = '1';
         setTimeout(()=>{
-          document.getElementById('clickMe').textContent = 'Kyu nehi bol rahe ho 🤐';
+          document.getElementById('clickMe').textContent = 'Kyu nehi bol rahe ho 👆';
         },500)
       }
     }, [audio]);
