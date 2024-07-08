@@ -3,11 +3,12 @@ import Image from 'next/image';
 import styles from './Profile.module.css';
 import Intro from '../Intro/Intro';
 
+
 const Profile = () => {
+  const img_src = '/images/bitmojiNew.png';
     const [audio, setAudio] = useState(false);
     const [isLocked, setIsLocked] = useState(true);
     const lockSoundRef = useRef(null);
-    const img_src = '/images/bitmojiNew.png';
     useEffect(() => {
       const playButton = document.getElementById('audio-play');
       const pauseButton = document.getElementById('audio-pause');

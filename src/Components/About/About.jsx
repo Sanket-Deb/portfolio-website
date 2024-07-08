@@ -3,6 +3,7 @@ import Image from 'next/image';
 import styles from './About.module.css';
 import { Zilla_Slab } from 'next/font/google';
 import DownloadIcon from '@mui/icons-material/Download';
+import aboutImg from '../../../public/images/bitmoji_about.png'
 
 const zilla=Zilla_Slab({
     weight:'400',
@@ -17,7 +18,7 @@ const About = () => {
   return (
     <>
     <div id='about' className={styles.AboutContainer}>
-        <Image src={abt_img} height={500} width={500} alt="AboutPic" id="aboutImg"  />
+        <Image src={aboutImg} height={500} width={500} alt="AboutPic" id="aboutImg"  />
         <div  className={styles.About}>
             <h3>About Me!</h3><br/>
             <span className={zilla.className +" "+ styles.zilla}>
