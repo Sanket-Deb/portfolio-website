@@ -5,7 +5,12 @@ import EmailIcon from '@mui/icons-material/Email';
 import LocationOnIcon from '@mui/icons-material/LocationOn';
 import SendIcon from '@mui/icons-material/Send';
 import OpenInNewIcon from '@mui/icons-material/OpenInNew';
-import { Zilla_Slab } from 'next/font/google';
+import { Zilla_Slab, Roboto  } from 'next/font/google';
+
+const roboto = Roboto ({
+  subsets: ['latin'],
+  weight: ['400','700']
+})
 
 const zilla=Zilla_Slab({
     weight:'400',
@@ -24,6 +29,7 @@ const [isFormValid, setIsFormValid] = useState(false);
 const [nameError, setNameError] = useState("");
 const [emailError, setEmailError] = useState("");
 const [popup, setPopup] = useState({show: false, message:"", type:""});
+const [videoPopup, setVideoPopup] = useState(false);
 
   const handleChange = (e) => {
     const { name: inputName, value } = e.target;
@@ -134,7 +140,20 @@ const [popup, setPopup] = useState({show: false, message:"", type:""});
                       <p>Jaipur, Rajasthan, India</p>
                     </div>
                 </div>
-
+                <button className={styles.Btnmessage} onClick={()=> setVideoPopup(true)}>My message to you 😁!<OpenInNewIcon style={{ marginLeft: "1rem" }} />
+                </button>
+                {videoPopup && (
+                <div className={roboto.className +" "+styles.videoPopup}>
+                  <p>          VISUAL REPRESENTATION OF</p>
+                  <p>HOW YOU WOULD FEEL IF YOU HELP ME GET A JOB</p>
+                  <div className={styles.videoFrame}>
+                  <iframe width="100%" height="100%" src="https://www.youtube.com/embed/rSIXLcvXMQo?si=gX9iJc3vyyLJCvbx" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                  </div>
+                  <button onClick={()=> setVideoPopup(false)}>
+                    CLOSE
+                  </button>
+                </div>
+              )}
             </div>
               <form className={zilla.className +" "+styles.FormBox} onSubmit={handleSubmit}>
                 <div className={styles.FormInput}>

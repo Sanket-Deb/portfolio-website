@@ -18,7 +18,7 @@ const Intro = ({isLocked, setIsLocked, lockSoundRef}) => {
         <div className={zilla.className +" "+ styles.zilla}>
           <Typewriter 
               options={{
-              strings: ["Hi! I'm Sanket, a rookie code wrangler. Still leraning, but hey, Rome wasn't built in a day, and neither was this website! Join me as I conquer bugs and tinker with tech one line of code at a time."],
+              strings: ["Hi! I'm Sanket Deb, a rookie code wrangler. Still learning, but hey, Rome wasn't built in a day, and neither was this website! Join me as I conquer bugs and tinker with tech one line of code at a time."],
               autoStart: true,
               loop: false,
               deleteSpeed:Infinity,

@@ -13,7 +13,6 @@ const zilla=Zilla_Slab({
 })
 
 const About = () => {
-    const abt_img = '/images/bitmoji_about.png';
 
   return (
     <>
