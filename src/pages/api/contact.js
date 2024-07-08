@@ -6,10 +6,14 @@ export default async function handler(req, res) {
     try {
       const client = await clientPromise;
       const db = client.db('contact');
-      const { name, email, message } = req.body;
+      const { username, email, message } = req.body;
+      
+      if (!username || !email || !message) {
+        return res.status(400).json({ error: 'All fields are required' });
+      }
 
       const result = await db.collection('contacts').insertOne({
-        name,
+        username,
         email,
         message,
         createdAt: new Date(),

@@ -1,7 +1,7 @@
 import AutoPlayAudio from "@/Components/Audio/AutoPlayAudio";
 import Profile from "@/Components/Profile/Profile";
 import About from "@/Components/About/About";
-import ContactP from "@/Components/ContactNew/ContactP";
+import Contact from "@/Components/ContactNew/Contact";
 
 
 
@@ -12,7 +12,7 @@ export default function Home() {
     <AutoPlayAudio src={'./audio/mujix.mp3'}/>
       <Profile />
       <About/>
-      <ContactP />
+      <Contact />
     </>
   );
 }
