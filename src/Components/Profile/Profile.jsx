@@ -2,10 +2,10 @@ import React, { useEffect, useRef, useState } from 'react'
 import Image from 'next/image';
 import styles from './Profile.module.css';
 import Intro from '../Intro/Intro';
+import ProfileImg from '../../../public/images/bitmojiNew.png'
 
 
 const Profile = () => {
-  const img_src = '/images/bitmojiNew.png';
     const [audio, setAudio] = useState(false);
     const [isLocked, setIsLocked] = useState(true);
     const lockSoundRef = useRef(null);
@@ -35,9 +35,10 @@ const Profile = () => {
     }, [audio]);
   return (
     <>
-    <div id='home' className={styles.pfp}>
+    <div className={styles.profileContainer}>
       <button  id='clickMe' className={styles.clickMe} onClick={()=>{setAudio(!audio); setIsLocked(!isLocked);lockSoundRef.current.play();}}>Kyu nehi bol rahe ho 😒</button>
-          <Image src={img_src} height={500} width={500} alt="ProfilePic" id="profileImg"  />
+          <Image src={ProfileImg} height={500} width={500} alt="ProfilePic" id="profileImg"  />
+          <button  id='phoneClickMe' className={styles.phoneClickMe} onClick={()=>{setAudio(!audio); setIsLocked(!isLocked);lockSoundRef.current.play();}}>Surprise 🎉</button>
         <Intro isLocked={isLocked} setIsLocked={setIsLocked} lockSoundRef={lockSoundRef} />
     </div>
     </>
