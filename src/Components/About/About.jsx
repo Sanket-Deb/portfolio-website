@@ -3,7 +3,7 @@ import Image from 'next/image';
 import styles from './About.module.css';
 import { Zilla_Slab } from 'next/font/google';
 import DownloadIcon from '@mui/icons-material/Download';
-import aboutImg from '../../../public/images/bitmoji_about.png'
+import aboutImg from '../../../public/images/bitmoji_about.png';
 
 const zilla=Zilla_Slab({
     weight:'400',

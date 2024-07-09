@@ -74,5 +74,4 @@
   
   .DownloadBtn:hover {
     opacity: 0.75; /* Decreases opacity by 25% */
-    color: rgb(71, 195, 71);
   }

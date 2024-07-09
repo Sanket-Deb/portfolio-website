@@ -140,7 +140,7 @@ const [videoPopup, setVideoPopup] = useState(false);
                       <p>Jaipur, Rajasthan, India</p>
                     </div>
                 </div>
-                <button className={styles.Btnmessage} onClick={()=> setVideoPopup(true)}>My message to you 😁!<OpenInNewIcon style={{ marginLeft: "1rem" }} />
+                <button className={roboto.className +" "+styles.Btnmessage} onClick={()=> setVideoPopup(true)}>My message for you 😁!<OpenInNewIcon style={{ marginLeft: "1rem" }} />
                 </button>
                 {videoPopup && (
                 <div className={roboto.className +" "+styles.videoPopup}>
@@ -163,7 +163,7 @@ const [videoPopup, setVideoPopup] = useState(false);
                 {emailError && <p className={styles.ErrorMessage}>{emailError}</p>}
                 </div>
                 <textarea id="message" name="message" placeholder="Shoot your message!" required value={formData.message} onChange={handleChange}/>
-                <button className={styles.SendMessage} style={{ opacity:!isFormValid? 0.4 : 1 }} disabled={!isFormValid}>
+                <button className={roboto.className +" "+styles.SendMessage} style={{ opacity:!isFormValid? 0.4 : 1 }} disabled={!isFormValid}>
                   <input type="submit"  value="Send Message"  />
                   <SendIcon />
                 </button>
