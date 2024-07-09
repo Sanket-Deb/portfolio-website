@@ -1,4 +1,4 @@
-.pfp {
+.profileContainer {
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -8,8 +8,11 @@
     /* margin: auto; */
     position: relative;
 }
-.pfp img{
+.profileContainer img{
     z-index: 2;
+}
+.phoneClickMe{
+    display: none;
 }
 .clickMe{
     position: absolute;
@@ -26,4 +29,35 @@
 }
 .clickMe:hover{
 opacity: 0.6;
+}
+/* large screens  */
+@media (max-width: 1400px){ 
+    .profileContainer{
+        flex-direction: column;
+    }
+}
+@media (max-width: 600px){
+    /* tablets  */
+    .profileContainer{
+        flex-direction: column;
+        gap: 0px;
+    }
+    .phoneClickMe{
+        display: block;
+        background:rgba(210, 214, 254, 0.427);
+        padding: 0.3rem;
+        border-radius: 5px;
+        width: 180px;
+        text-align: center; 
+    }
+    .phoneClickMe:hover{
+        opacity: 0.6;
+        }
+    .clickMe{
+        display: none;
+    }
+}
+@media (max-width: 480px){
+    /* mobile */
+
 }

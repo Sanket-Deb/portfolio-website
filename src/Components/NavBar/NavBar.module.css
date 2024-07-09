@@ -1,3 +1,11 @@
+.navBarContainer{
+    max-width: 1800px;
+    /* margin: auto; */
+    position: sticky;
+    top: 0;
+    z-index: 10000;
+}
+
 .navBar {
     display: flex;
     justify-content: space-between;
@@ -12,10 +20,31 @@
     z-index: 1000; 
     background-color: white; 
     box-shadow: rgba(33, 35, 38, 0.1) 0px 10px 10px -10px;
-    padding: 30px  230px 30px 230px;
+    padding: 3rem 15rem;
     width: 100%;
 }
 
 .navBar a:hover{
     color: rgb(71, 195, 71);
 }
+
+/* large screens  */
+@media (max-width: 1400px){ 
+    .navBar{
+        padding: 3rem 10rem;
+    }
+  }
+  @media (max-width: 768px){
+    /* tablets  */
+    .navBar{
+        padding: 3rem 5rem;
+    }
+  
+  }
+  @media (max-width: 480px){
+    /* mobile */
+    .navBar{
+        padding: 3rem 2rem;
+    }
+  
+  }

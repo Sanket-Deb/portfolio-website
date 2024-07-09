@@ -6,6 +6,7 @@ import LocationOnIcon from '@mui/icons-material/LocationOn';
 import SendIcon from '@mui/icons-material/Send';
 import OpenInNewIcon from '@mui/icons-material/OpenInNew';
 import { Zilla_Slab, Roboto  } from 'next/font/google';
+import Tooltip from '@mui/material/Tooltip';
 
 const roboto = Roboto ({
   subsets: ['latin'],
@@ -112,7 +113,8 @@ const [videoPopup, setVideoPopup] = useState(false);
   },[popup]);
 
   return (
-    <div id='contact' className={styles.ContactContainer}>
+    <div id='contact' className={styles.ContactConatiner}>
+    <div className={styles.ContactBox}>
         <div className={styles.ContactTitle}>
             <h3>Contact Me!</h3>
             <p className={zilla.className}>Get in touch</p>
@@ -145,7 +147,7 @@ const [videoPopup, setVideoPopup] = useState(false);
                 {videoPopup && (
                 <div className={roboto.className +" "+styles.videoPopup}>
                   <p>          VISUAL REPRESENTATION OF</p>
-                  <p>HOW YOU WOULD FEEL IF YOU HELP ME GET A JOB</p>
+                  <p>HOW YOU WOULD FEEL IF YOU REFER ME FOR A JOB</p>
                   <div className={styles.videoFrame}>
                   <iframe width="100%" height="100%" src="https://www.youtube.com/embed/rSIXLcvXMQo?si=gX9iJc3vyyLJCvbx" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
                   </div>
@@ -163,10 +165,12 @@ const [videoPopup, setVideoPopup] = useState(false);
                 {emailError && <p className={styles.ErrorMessage}>{emailError}</p>}
                 </div>
                 <textarea id="message" name="message" placeholder="Shoot your message!" required value={formData.message} onChange={handleChange}/>
+                <Tooltip title={"Fill the fields above to send message"}>
                 <button className={roboto.className +" "+styles.SendMessage} style={{ opacity:!isFormValid? 0.4 : 1 }} disabled={!isFormValid}>
                   <input type="submit"  value="Send Message"  />
                   <SendIcon />
                 </button>
+                </Tooltip>
               </form>
               {popup.show && (
                 <div className={`${styles.Popup} ${styles[popup.type]}`}>
@@ -177,6 +181,7 @@ const [videoPopup, setVideoPopup] = useState(false);
                 </div>
               )}
         </div>
+    </div>
     </div>
   );
 };

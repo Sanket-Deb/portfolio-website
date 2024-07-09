@@ -1,11 +1,15 @@
-.ContactContainer{
+.ContactConatiner{
+    padding-top: 6rem;
+    margin: 4rem 0 5rem 0;
+}
+
+.ContactBox{
     display: flex;
     flex-direction: column;
     justify-content:center;
     align-items: center;
     gap: 4rem;
-    margin: 10rem 0 5rem 0;
-    padding: 3rem;
+    padding: 2rem 3rem;
     width: 100%;
     box-shadow: rgba(0, 0, 0, 0.15) 0px 5px 15px 0px;
     border-radius: 10px;
@@ -26,6 +30,7 @@
     width: 100%;
     gap: 3rem;
     padding:0 5rem;
+    max-width: 1000px;
 }
 
 .InfoBox{
@@ -42,7 +47,7 @@
     padding: 1rem;
     gap: 1rem;
     align-items: center;
-    box-shadow: rgba(50, 50, 93, 0.25) 0px 30px 60px -12px inset, rgba(0, 0, 0, 0.3) 0px 18px 36px -18px inset;
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 1px 3px 0px, rgba(0, 0, 0, 0.06) 0px 1px 2px 0px;
 }
 .InfoItem h3{
     font-weight: bold;
@@ -207,3 +212,23 @@
     width: 280px;
 }
 
+/* large screens  */
+@media (max-width: 1400px){ 
+    .ContactCard{
+        padding: 0;
+    }
+}
+@media (max-width: 768px){
+    /* tablets  */
+    .ContactCard{
+        flex-direction: column;
+        padding: 0;
+    }
+}
+@media (max-width: 480px){
+    /* mobile */
+    .videoFrame{
+        height:300px;
+        width: 280px;
+    }
+}
