@@ -11,7 +11,7 @@ export default function Home() {
     <Head>
     <title>Sankets Portfolio</title>
         <meta name="description" content="Preferably open in a PC" />
-        <meta name="viewport" content="width=device-width, initial-scale=0.9" />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
         <meta property="og: title" content="Sankets Portfolio" />
         <meta property="og: type" content="website" />
         <meta property="og:image" content="https://sanket-deb.github.io/portfolio-website/images/bitmoji_wave.png" />
