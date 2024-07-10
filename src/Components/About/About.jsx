@@ -17,7 +17,7 @@ const About = () => {
   return (
     <>
     <div id='about' className={styles.AboutContainer}>
-        <Image src={aboutImg} height={500} width={500} alt="AboutPic" id="aboutImg"  />
+        <Image className={styles.abtImage} src={aboutImg} height={500} width={500} alt="AboutPic" id="aboutImg"  />
         <div  className={styles.About}>
             <h3>About Me!</h3>
             <span className={`${zilla.className} ${styles.aboutContent}`}>
