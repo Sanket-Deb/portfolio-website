@@ -11,7 +11,7 @@
 
 .AboutContainer{
     display: flex;
-    padding-top: 6rem;
+    padding-top: 7rem;
     margin: 4rem 0 5rem 0;
     gap: 7rem;
     align-items: center;
@@ -86,9 +86,15 @@
 }
 @media (max-width: 768px){
   /* tablets  */
-
+  .AboutContainer{
+    margin: 0rem;
+    gap: 1rem;
+    padding-top: 4rem;
+  }
 }
 @media (max-width: 480px){
   /* mobile */
-
+  .AboutContainer{
+    padding-top: 3rem;
+  }
 }

@@ -27,8 +27,8 @@ const Contact = () => {
     message: ''
   });
 const [isFormValid, setIsFormValid] = useState(false);
-const [nameError, setNameError] = useState("");
-const [emailError, setEmailError] = useState("");
+const [nameError, setNameError] = useState(false);
+const [emailError, setEmailError] = useState(false);
 const [popup, setPopup] = useState({show: false, message:"", type:""});
 const [videoPopup, setVideoPopup] = useState(false);
 
@@ -40,12 +40,12 @@ const [videoPopup, setVideoPopup] = useState(false);
     });
   
   if ( inputName === "username"){
-    setNameError(value.trim() === "" || !/^[a-zA-Z\s]+$/.test(value)? "Please enter valid name." : "");
+    setNameError(value.trim() === "" || !/^[a-zA-Z\s]+$/.test(value)? true : false);
     }
 
   if( inputName === "email"){
     setEmailError(value.trim() === "''" || !validateEmail(value) ?
-    "Please enter a valid email." : "");
+    true : false);
     }
   };
 
@@ -114,62 +114,64 @@ const [videoPopup, setVideoPopup] = useState(false);
 
   return (
     <div id='contact' className={styles.ContactConatiner}>
-    <div className={styles.ContactBox}>
+      <div className={styles.ContactBox}>
         <div className={styles.ContactTitle}>
             <h3>Contact Me!</h3>
             <p className={zilla.className}>Get in touch</p>
         </div>
-        <div className={zilla.className +" "+styles.ContactCard}>
-            <div className={styles.InfoBox}>
-                <div className={styles.InfoItem}>
-                    <CallIcon/>
-                    <div>
-                      <h3>Call Me</h3>
-                      <p>+91 9599694710</p>
-                    </div>
+      <div className={zilla.className +" "+styles.ContactCard}>
+          <div className={styles.InfoBox}>
+              <div className={styles.InfoItem}>
+                <CallIcon/>
+                <div>
+                  <h3>Call Me</h3>
+                  <p>+91 9599694710</p>
                 </div>
-                <div className={styles.InfoItem}>
-                    <EmailIcon/>
-                    <div>
-                      <h3>Email at</h3>
-                      <p>sanketdebs@gmail.com</p>
-                    </div>
+               </div>
+              <div className={styles.InfoItem}>
+                <EmailIcon/>
+                <div>
+                  <h3>Email at</h3>
+                  <p>sanketdebs@gmail.com</p>
                 </div>
-                <div className={styles.InfoItem}>
-                    <LocationOnIcon/>
-                    <div>
-                      <h3>Location</h3>
-                      <p>Jaipur, Rajasthan, India</p>
-                    </div>
+              </div>
+              <div className={styles.InfoItem}>
+                <LocationOnIcon/>
+                <div>
+                  <h3>Location</h3>
+                  <p>Jaipur, Rajasthan, India</p>
                 </div>
-                <button className={roboto.className +" "+styles.Btnmessage} onClick={()=> setVideoPopup(true)}>My message for you 😁!<OpenInNewIcon style={{ marginLeft: "1rem" }} />
-                </button>
-                {videoPopup && (
+              </div>
+              <button className={roboto.className +" "+styles.Btnmessage} onClick={()=> setVideoPopup(true)}>
+                My message for you 😁!
+                <OpenInNewIcon style={{ marginLeft: "1rem" }} />
+              </button>
+              {videoPopup && (
                 <div className={roboto.className +" "+styles.videoPopup}>
                   <p>          VISUAL REPRESENTATION OF</p>
                   <p>HOW YOU WOULD FEEL IF YOU REFER ME FOR A JOB</p>
                   <div className={styles.videoFrame}>
-                  <iframe width="100%" height="100%" src="https://www.youtube.com/embed/rSIXLcvXMQo?si=gX9iJc3vyyLJCvbx" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                    <iframe width="100%" height="100%" src="https://www.youtube.com/embed/rSIXLcvXMQo?si=gX9iJc3vyyLJCvbx" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
                   </div>
                   <button onClick={()=> setVideoPopup(false)}>
                     CLOSE
                   </button>
                 </div>
               )}
-            </div>
+          </div>
               <form className={zilla.className +" "+styles.FormBox} onSubmit={handleSubmit}>
                 <div className={styles.FormInput}>
-                <input className={styles.UsernameInput} type="text" id="username" name="username"  placeholder="Enter your name" required value={formData.username} onChange={handleChange}/>
-                {nameError && <p className={styles.ErrorMessage}>{nameError}</p>}
-                <input className={styles.EmailInput}  type="email" id="email" name="email" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$" placeholder="Enter your email" required value={formData.email} onChange={handleChange}/>
-                {emailError && <p className={styles.ErrorMessage}>{emailError}</p>}
+                  <input className={styles.UsernameInput} type="text" id="username" name="username"  placeholder="Enter your name" required value={formData.username} onChange={handleChange}/>
+                  <p className={styles.ErrorMessage} style={{visibility:nameError? "visible" : "hidden"}}>Please enter a valid string.</p>
+                  <input className={styles.EmailInput}  type="email" id="email" name="email" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$" placeholder="Enter your email" required value={formData.email} onChange={handleChange}/>
+                  <p className={styles.ErrorMessage} style={{visibility:emailError? "visible" : "hidden"}}>Please enter a valid email.</p>
                 </div>
                 <textarea id="message" name="message" placeholder="Shoot your message!" required value={formData.message} onChange={handleChange}/>
                 <Tooltip title={!isFormValid? "Fill the fields above to send message":""}>
-                <button className={roboto.className +" "+styles.SendMessage} style={{ opacity:!isFormValid? 0.4 : 1 }} disabled={!isFormValid}>
-                  <input type="submit"  value="Send Message"  />
-                  <SendIcon />
-                </button>
+                  <button className={roboto.className +" "+styles.SendMessage} style={{ opacity:!isFormValid? 0.4 : 1 }} disabled={!isFormValid}>
+                    <input type="submit"  value="Send Message"  />
+                    <SendIcon />
+                  </button>
                 </Tooltip>
               </form>
               {popup.show && (

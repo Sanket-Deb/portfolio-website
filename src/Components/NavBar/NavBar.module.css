@@ -12,7 +12,6 @@
     align-items: center;
     font-weight: lighter;
     gap: 2rem;
-    height: 4rem;
     color: black;
     /* margin-bottom: 4rem; */
     position: sticky;
@@ -20,7 +19,7 @@
     z-index: 1000; 
     background-color: white; 
     box-shadow: rgba(33, 35, 38, 0.1) 0px 10px 10px -10px;
-    padding: 3rem 15rem;
+    padding: 1rem 15rem;
     width: 100%;
 }
 
@@ -31,20 +30,20 @@
 /* large screens  */
 @media (max-width: 1400px){ 
     .navBar{
-        padding: 3rem 10rem;
+        padding: 2rem 10rem;
     }
   }
   @media (max-width: 768px){
     /* tablets  */
     .navBar{
-        padding: 3rem 5rem;
+        padding: 2rem 5rem;
     }
   
   }
   @media (max-width: 480px){
     /* mobile */
     .navBar{
-        padding: 3rem 2rem;
+        padding: 1rem 1rem;
     }
   
   }
