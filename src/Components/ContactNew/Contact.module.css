@@ -189,8 +189,9 @@
     display: flex;
     flex-direction: column;
     align-items: center;
+    justify-content: center;
 }
-.videoPopup p{
+.videoPopup span{
     font-size: 1.5rem;
     font-weight: 800;
 }
@@ -217,6 +218,14 @@
     .ContactCard{
         padding: 0;
     }
+    .videoFrame{
+        height:300px;
+        width: 280px;
+    }
+    .videoPopup span{
+        font-size: 0.7rem;
+    }
+
 }
 @media (max-width: 768px){
     /* tablets  */
@@ -224,13 +233,11 @@
         flex-direction: column-reverse;
         padding: 0;
     }
+
 }
 @media (max-width: 480px){
     /* mobile */
-    .videoFrame{
-        height:300px;
-        width: 280px;
-    }
+
     .ContactBox{
         padding: 2rem 2rem;
     }

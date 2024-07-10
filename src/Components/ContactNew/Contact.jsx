@@ -148,8 +148,8 @@ const [videoPopup, setVideoPopup] = useState(false);
               </button>
               {videoPopup && (
                 <div className={roboto.className +" "+styles.videoPopup}>
-                  <p>          VISUAL REPRESENTATION OF</p>
-                  <p>HOW YOU WOULD FEEL IF YOU REFER ME FOR A JOB</p>
+                  <span>VISUAL REPRESENTATION OF</span>
+                  <span>HOW YOU WOULD FEEL IF YOU REFER ME FOR A JOB</span>
                   <div className={styles.videoFrame}>
                     <iframe width="100%" height="100%" src="https://www.youtube.com/embed/rSIXLcvXMQo?si=gX9iJc3vyyLJCvbx" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
                   </div>
