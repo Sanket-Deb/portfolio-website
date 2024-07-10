@@ -165,7 +165,7 @@ const [videoPopup, setVideoPopup] = useState(false);
                 {emailError && <p className={styles.ErrorMessage}>{emailError}</p>}
                 </div>
                 <textarea id="message" name="message" placeholder="Shoot your message!" required value={formData.message} onChange={handleChange}/>
-                <Tooltip title={"Fill the fields above to send message"}>
+                <Tooltip title={!isFormValid? "Fill the fields above to send message":""}>
                 <button className={roboto.className +" "+styles.SendMessage} style={{ opacity:!isFormValid? 0.4 : 1 }} disabled={!isFormValid}>
                   <input type="submit"  value="Send Message"  />
                   <SendIcon />
@@ -173,7 +173,7 @@ const [videoPopup, setVideoPopup] = useState(false);
                 </Tooltip>
               </form>
               {popup.show && (
-                <div className={`${styles.Popup} ${styles[popup.type]}`}>
+                <div className={roboto.className +" "+`${styles.Popup} ${styles[popup.type]}`}>
                   <p>{popup.message}</p>
                   <button onClick={()=> setPopup({show:false, message: "", type: ""})}>
                     CLOSE
