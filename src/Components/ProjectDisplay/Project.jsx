@@ -88,12 +88,12 @@ const Project = () => {
             <div className={styles.buttonsWrapper}>
               <a href={currentProject.repo} target="_blank" rel="noopener noreferrer">
                 <button className={styles.ProjectButtons}>
-                  Github<GitHubIcon style={{ marginLeft:'1rem' }} />
+                  Github <GitHubIcon className={styles.btnIcon} />
                 </button>
               </a>
               <a href={currentProject.live} target="_blank" rel="noopener noreferrer">
                 <button className={styles.ProjectButtons}>
-                  Go Live<DvrIcon style={{ marginLeft:'1rem' }} />
+                  Go Live<DvrIcon  className={styles.btnIcon}/>
                 </button>
               </a> 
             </div>
