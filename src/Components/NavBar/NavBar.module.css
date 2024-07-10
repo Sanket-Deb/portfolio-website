@@ -28,15 +28,15 @@
 }
 
 /* large screens  */
-@media (max-width: 1400px){ 
+@media (max-width: 1200px){ 
     .navBar{
-        padding: 2rem 10rem;
+        padding: 1rem 10rem;
     }
   }
   @media (max-width: 768px){
     /* tablets  */
     .navBar{
-        padding: 2rem 5rem;
+        padding: 1rem 5rem;
     }
   
   }

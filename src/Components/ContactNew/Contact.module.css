@@ -21,7 +21,7 @@
     align-items: center;
 }
 .ContactTitle h3{
-    font-size: 2.5rem;
+    font-size: 3rem;
     font-weight: 700;
 }
 
@@ -47,7 +47,7 @@
     padding: 1rem;
     gap: 1rem;
     align-items: center;
-    background-color: #6e7375;
+    background-color: #cacfd17a;
 }
 .InfoItem h3{
     font-weight: bold;
@@ -69,7 +69,8 @@
 .UsernameInput{
     width: 100%;
     padding: 0.8rem;
-    box-shadow: rgba(6, 24, 44, 0.4) 0px 0px 0px 2px, rgba(6, 24, 44, 0.65) 0px 4px 6px -1px, rgba(255, 255, 255, 0.08) 0px 1px 0px inset;
+    border: solid;
+    border-color: grey;
     border-radius: 5px;
     font-size: 1rem;
 
@@ -78,7 +79,8 @@
 .EmailInput{
     width: 100%;
     padding: 0.8rem;
-    box-shadow: rgba(6, 24, 44, 0.4) 0px 0px 0px 2px, rgba(6, 24, 44, 0.65) 0px 4px 6px -1px, rgba(255, 255, 255, 0.08) 0px 1px 0px inset;
+    border: solid;
+    border-color: grey;
     border-radius: 5px;
     font-size: 1rem;
 
@@ -88,23 +90,36 @@
     margin-top: 0.5rem;
     width: 100%;
     padding: 0.8rem;
-    box-shadow: rgba(6, 24, 44, 0.4) 0px 0px 0px 2px, rgba(6, 24, 44, 0.65) 0px 4px 6px -1px, rgba(255, 255, 255, 0.08) 0px 1px 0px inset;
+    border: solid;
+    border-color: grey;
     border-radius: 5px;
     font-size: 1rem;
-    height: 162px;
-    resize: vertical;
+    height: 145px;
+    resize: none;
 }
 
-
-.SendMessage{
+.DisabledSendMessage{
     margin-top: 2rem;
     display: flex;
-    gap: 1rem;
     justify-content: center;
     background-color: #4a6572;;
     color: white;
     padding: 1rem;
-    box-shadow: rgba(6, 24, 44, 0.4) 0px 0px 0px 2px, rgba(6, 24, 44, 0.65) 0px 4px 6px -1px, rgba(255, 255, 255, 0.08) 0px 1px 0px inset;
+    border-radius: 10px;
+    width: 100%;
+    gap: 2rem;
+    transition: opacity 0.3s ease;
+    font-weight: 600;
+    cursor: pointer;
+    opacity: 0.4;
+}
+.SendMessage{
+    margin-top: 2rem;
+    display: flex;
+    justify-content: center;
+    background-color: #365463;
+    color: white;
+    padding: 1rem;
     border-radius: 10px;
     width: 100%;
     gap: 2rem;
@@ -112,11 +127,15 @@
     font-weight: 600;
     cursor: pointer;
 }
+.SendMessage:hover {
+    opacity: 0.75; /* Decreases opacity by 25% */
+    box-shadow: rgba(6, 24, 44, 0.4) 0px 0px 0px 2px, rgba(6, 24, 44, 0.65) 0px 4px 6px -1px, rgba(255, 255, 255, 0.08) 0px 1px 0px inset;
+}
 
 
 .ErrorMessage {
     color: red;
-    font-size: 0.875rem;
+    font-size: 1rem;
     /* margin-top: 0.5rem; */
     display: block; /* Ensure it appears below the inputs */
   }
@@ -129,7 +148,6 @@
     transform: translate(-50%, -50%);
     padding: 2rem;
     border-radius: 8px;
-    box-shadow: rgba(0, 0, 0, 0.2) 0px 5px 15px;
     background-color: white;
     z-index: 1000;
     display: flex;
@@ -161,10 +179,9 @@
   }
 
 .Btnmessage{
-    background-color: #4a6572;;
+    background-color: #365463;
     color: white;
     padding: 1rem;
-    box-shadow: rgba(6, 24, 44, 0.4) 0px 0px 0px 2px, rgba(6, 24, 44, 0.65) 0px 4px 6px -1px, rgba(255, 255, 255, 0.08) 0px 1px 0px inset;
     border-radius: 10px;
     width: 100%;
     gap: 2rem;
@@ -174,6 +191,7 @@
 }
 .Btnmessage:hover {
     opacity: 0.75; /* Decreases opacity by 25% */
+    box-shadow: rgba(6, 24, 44, 0.4) 0px 0px 0px 2px, rgba(6, 24, 44, 0.65) 0px 4px 6px -1px, rgba(255, 255, 255, 0.08) 0px 1px 0px inset;
 }
 
 .videoPopup{
@@ -214,7 +232,7 @@
 }
 
 /* large screens  */
-@media (max-width: 1400px){ 
+@media (max-width: 1200px){ 
     .ContactCard{
         padding: 0;
     }
@@ -230,7 +248,7 @@
 @media (max-width: 768px){
     /* tablets  */
     .ContactCard{
-        flex-direction: column-reverse;
+        flex-direction: column;
         padding: 0;
     }
 
@@ -239,9 +257,76 @@
     /* mobile */
 
     .ContactBox{
-        padding: 2rem 2rem;
+        padding: 1rem 2rem;
+        gap: 0.5rem;
     }
     .ContactConatiner{
         margin: 0rem;
+    }
+    .ContactTitle h3{
+        font-size: 1.5rem;
+    }
+    .ContactTitle p{
+        font-size: 0.8rem;
+    }
+    .InfoBox{
+        gap: 0.5rem;
+        padding: 0rem 1rem;
+    }
+    .InfoItem{
+        gap: 0.8rem;
+        padding: 0.4rem 0.5rem;
+    }
+    .InfoItem h3{
+        font-size: 0.8rem;
+    }
+    .InfoItem p{
+        font-size: 0.8rem;
+    }
+    .Btnmessage{
+        padding: 0.5rem;
+        font-weight: normal;
+        font-size: 0.8rem;
+    }
+    .ContactCard{
+        gap: 1rem;
+    }
+    .FormBox{
+        padding: 0rem 1rem;
+    }
+    .FormInput {
+        gap: 0.1rem;
+      }
+    .UsernameInput{
+        padding: 0.5rem;
+        font-size: 0.8rem;
+    }
+    .EmailInput{
+        padding: 0.5rem;
+        border-color: grey;
+        font-size: 0.8rem;
+    }
+    .ErrorMessage {
+        font-size: 0.6rem;
+      }
+    .FormBox textarea {
+        margin-top: 0.2rem;
+        width: 100%;
+        padding: 0.4rem;
+        font-size: 0.8rem;
+    }
+    .DisabledSendMessage{
+        margin-top: 0.8rem;
+        gap: 0.5rem;
+        padding: 0.5rem;
+        font-size: 0.8rem;
+        font-weight: normal;
+    }
+    .SendMessage{
+        margin-top: 0.8rem;
+        gap: 0.5rem;
+        padding: 0.5rem;
+        font-size: 0.8rem;
+        font-weight: normal;
     }
 }

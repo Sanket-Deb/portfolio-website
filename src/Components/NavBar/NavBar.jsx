@@ -1,5 +1,11 @@
 import React from 'react';
 import styles from './NavBar.module.css';
+import { Roboto } from 'next/font/google';
+
+const roboto = Roboto ({
+  subsets: ['latin'],
+  weight: ['400','700']
+})
 
 const NavBar = () => {
   return (

@@ -14,8 +14,8 @@ const zilla=Zilla_Slab({
 const Intro = ({isLocked, setIsLocked, lockSoundRef}) => {
   return (
     <div className={styles.intro}>
-        <h3>Hello There!</h3><br/>
-        <div className={zilla.className +" "+ styles.zilla}>
+        <h3>Hello There!</h3>
+        <div className={zilla.className +" "+ styles.typeConatiner}>
           <Typewriter 
               options={{
               strings: ["Hi! I'm Sanket Deb, a rookie code wrangler. Still learning, but hey, Rome wasn't built in a day, and neither was this website! Join me as I conquer bugs and tinker with tech one line of code at a time."],
@@ -28,7 +28,7 @@ const Intro = ({isLocked, setIsLocked, lockSoundRef}) => {
         </div>
         
     
-        <div style={{ margin: '10px 0' }}>
+        <div className={styles.socialsContiner}>
         <Socials isLocked={isLocked} setIsLocked={setIsLocked} lockSoundRef={lockSoundRef} />
         </div>
 
