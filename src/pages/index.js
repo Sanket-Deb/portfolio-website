@@ -10,7 +10,7 @@ export default function Home() {
     <>
     <Head>
     <title>Sankets Portfolio</title>
-        <meta name="description" content="Preferably open in a PC" />
+        <meta name="description" content="Welcome to Sanket's Portfolio, feel free to click around!" />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <meta property="og: title" content="Sankets Portfolio" />
         <meta property="og: type" content="website" />
