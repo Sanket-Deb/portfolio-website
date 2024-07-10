@@ -4,6 +4,8 @@
     width: 100%;
     font-weight: 700;
     margin-top: 40px;
+    justify-content: flex-end;
+    gap: 2rem;
 }
 
 .intro h3 {
@@ -14,9 +16,30 @@
     font-size: 1.2rem;
 }
 
-.zilla {
+.typeConatiner {
     /* width: 580px; */
     min-height: 120px;
     font-weight: 500;
 }
 
+.socialsContiner{
+    margin: 10px 0;
+}
+
+@media (max-width: 480px){
+    /* mobile */
+    .intro {
+        margin-top: 20px;
+        gap: 0.8rem
+    }
+    .intro h3 {
+        font-size: 1.5rem;
+    }
+    
+    .intro span {
+        font-size: 1rem;
+    }
+    .socialsContiner{
+        margin: 0rem;
+    }
+}

@@ -168,7 +168,7 @@ const [videoPopup, setVideoPopup] = useState(false);
                 </div>
                 <textarea id="message" name="message" placeholder="Shoot your message!" required value={formData.message} onChange={handleChange}/>
                 <Tooltip title={!isFormValid? "Fill the fields above to send message":""}>
-                  <button className={roboto.className +" "+styles.SendMessage} style={{ opacity:!isFormValid? 0.4 : 1 }} disabled={!isFormValid}>
+                  <button className={`${roboto.className} ${!isFormValid ? styles.DisabledSendMessage : styles.SendMessage}`} disabled={!isFormValid}>
                     <input type="submit"  value="Send Message"  />
                     <SendIcon />
                   </button>

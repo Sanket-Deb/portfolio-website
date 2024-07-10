@@ -3,7 +3,6 @@
     display: flex;
     align-items: center;
     gap: 1rem;
-    margin-top: 2rem;
 }
 
 .icons {
@@ -27,4 +26,9 @@
     display: flex;
     align-items: center;
     position: relative; /* Adjust this if needed */
+}
+
+@media (max-width: 480px){
+    /* mobile */
+
 }

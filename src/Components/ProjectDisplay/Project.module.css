@@ -39,7 +39,8 @@
 }
 
 .ProjectImage{
-    box-shadow: rgba(6, 24, 44, 0.4) 0px 0px 0px 4px, rgba(6, 24, 44, 0.65) 0px 4px 6px -1px, rgba(255, 255, 255, 0.08) 0px 1px 0px inset;
+    border: solid;
+    border-color: grey;
     border-radius: 8px;
 }
 /* .ProjectDescription{
@@ -58,7 +59,7 @@
     align-items: center;
     padding: 0.8rem;
     border-radius: 10px;
-    background-color: #4a6572;;
+    background-color: #365463;
     color: white;
     width: 100%;
 }
@@ -73,7 +74,7 @@
     align-items: center;
     justify-items: center;
     border-radius: 50%;
-    background-color: #4a6572;;
+    background-color: #365463;
     color: white;
     padding: 10px;
 }
@@ -82,7 +83,7 @@
     gap: 0.5rem;
 }
 /* large screens  */
-@media (max-width: 1400px){ 
+@media (max-width: 1200px){ 
     .ProjectContainer{
         padding-top: 6rem;
         margin: 0rem;
@@ -102,5 +103,26 @@
     /* mobile */
     .ProjectContainer{
         margin: 0;
+        padding-top: 4rem;
+    }
+    .PageTitle h3{
+        font-size: 1.5rem;
+        font-weight: 800;
+    }
+    .PageTitle p{
+        font-size: 0.8rem;
+    }
+    .ProjectCard{
+        gap:0.5rem;
+    }
+    .ProjectTitle{
+        font-size: 1.2rem;
+    }
+    .ProjectDescription{
+        font-size: 0.8rem;
+    }
+    .ProjectButtons{
+        padding: 0.2rem 0.5rem;
+        font-size: 1rem;
     }
 }
