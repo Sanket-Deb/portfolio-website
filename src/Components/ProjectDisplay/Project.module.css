@@ -1,20 +1,19 @@
 .ProjectContainer{
     display: flex;
-    flex-direction: column;
     align-items: center;
-    padding-top: 3rem;
+    padding-top: 5rem;
     margin: 4rem 0 5rem 0;
     width: 100%;
-    gap: 1rem;
+    gap: 8rem;
 }
 
 .PageTitle{
     display: flex;
     flex-direction: column;
-    align-items: center;
+
 }
 .PageTitle h3{
-    font-size: 3rem;
+    font-size: 6rem;
     font-weight: 800;
 }
 .PageTitle a{
@@ -26,11 +25,14 @@
     flex-direction: column;
     gap: 1rem;
     align-items: center;
-    padding: 3rem 4rem;
+    padding: 2rem 4rem;
     display: flex;
     box-shadow: rgba(0, 0, 0, 0.4) 0px 2px 8px, rgba(0, 0, 0, 0.3) 0px 7px 13px -3px, rgba(0, 0, 0, 0.2) 0px -3px 0px inset;
     border-radius: 10px;
     width: 100%;
+    height: 608px;
+    width: 608px;
+    position: relative;
 }
 
 .ProjectTitle{
@@ -48,6 +50,10 @@
 } */
 
 .ButtonContainer{
+    position: absolute;
+    bottom: 2rem; /* Adjust as needed to position the buttons within the card */
+    left: 50%;
+    transform: translateX(-50%);
     display: flex;
     gap: 0.5rem;
     align-items: center;
@@ -84,12 +90,24 @@
     display: flex;
     gap: 0.5rem;
 }
+
+
 /* large screens  */
 @media (max-width: 1200px){ 
     .ProjectContainer{
-        padding-top: 6rem;
+        padding-top: 5rem;
         margin: 0rem;
+        gap: 3rem;
+        flex-direction: column;
+        align-items: center;
     }
+    .ProjectContainer h3{
+        font-size: 5rem;
+    }
+    .PageTitle{
+        align-items: center;
+    }
+
 }
 @media (max-width: 768px){
     /* tablets  */
@@ -104,8 +122,13 @@
 @media (max-width: 480px){
     /* mobile */
     .ProjectContainer{
+        flex-direction: column;
         margin: 0;
         padding-top: 4rem;
+        gap: 1rem;
+    }
+    .PageTitle{
+        align-items: center;
     }
     .PageTitle h3{
         font-size: 1.5rem;
@@ -116,6 +139,8 @@
     }
     .ProjectCard{
         gap:0.5rem;
+        height: 480px;
+        width: 330px;
     }
     .ProjectTitle{
         font-size: 1.2rem;
@@ -130,7 +155,11 @@
         font-size: 0.8rem;
         width: 100%;
     }
+    .ButtonContainer{
+        bottom: 1rem;
+    }
     .btnIcon{
         margin-left: 0.5rem;
     }
+
 }
