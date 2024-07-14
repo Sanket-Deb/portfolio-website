@@ -1,6 +1,6 @@
 .AboutContainer{
   display: flex;
-  padding-top: 7rem;
+  padding-top: 6rem;
   margin: 4rem 0 5rem 0;
   gap: 7rem;
   align-items: center;
@@ -15,7 +15,7 @@
 }
 
 .About h3{
-    font-size: 2.5rem;
+    font-size: 3rem;
     font-weight: 700;
 }
 

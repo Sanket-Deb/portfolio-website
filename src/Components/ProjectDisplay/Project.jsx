@@ -93,7 +93,7 @@ const Project = () => {
               </a>
               <a href={currentProject.live} target="_blank" rel="noopener noreferrer">
                 <button className={styles.ProjectButtons}>
-                  Go Live<DvrIcon  className={styles.btnIcon}/>
+                  Visit <DvrIcon  className={styles.btnIcon}/>
                 </button>
               </a> 
             </div>
