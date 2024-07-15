@@ -4,40 +4,15 @@ import Brightness4Icon from '@mui/icons-material/Brightness4';
 import Brightness5Icon from '@mui/icons-material/Brightness5';
 
 const DarkMode = () => {
-    const [theme, setTheme] = useState('light') // Default theme
-    const [mounted, setMounted] = useState(false)
+    const [theme, setTheme] = useState('dark'); // Default to dark theme
 
     useEffect(() => {
-        setMounted(true)
-        const getInitialTheme = () => {
-            if (typeof window !== 'undefined') {
-                const storedTheme = localStorage.getItem('theme')
-                if (storedTheme) {
-                    return storedTheme
-                }
-                return window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light'
-            }
-            return 'light' // Default to light theme if window is not defined
-        }
-
-        setTheme(getInitialTheme())
-    }, [])
-
-    useEffect(() => {
-        if (mounted) {
-            document.documentElement.setAttribute('data-theme', theme)
-            localStorage.setItem('theme', theme)
-        }
-    }, [theme, mounted])
+        document.documentElement.setAttribute('data-theme', theme);
+    }, [theme]);
 
     const toggleTheme = () => {
-        setTheme(prevTheme => prevTheme === 'dark' ? 'light' : 'dark')
-    }
-
-    if (!mounted) {
-        return null // Render nothing on the server side
-    }
-
+        setTheme(prevTheme => prevTheme === 'dark' ? 'light' : 'dark');
+    };
 
   return (
     <div className={styles.darkModeToggle} onClick={toggleTheme}>
