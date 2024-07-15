@@ -6,6 +6,7 @@
     margin-top: 40px;
     justify-content: flex-end;
     gap: 2rem;
+    color: var(--text);
 }
 
 .intro h3 {
@@ -26,6 +27,13 @@
     margin: 10px 0;
 }
 
+
+@media (max-width: 1200px){ 
+    .typeConatiner {
+        min-height: 0px;
+    }
+
+}
 @media (max-width: 480px){
     /* mobile */
     .intro {

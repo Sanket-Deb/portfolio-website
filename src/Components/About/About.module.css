@@ -1,6 +1,6 @@
 .AboutContainer{
   display: flex;
-  padding-top: 6rem;
+  padding-top: 5.9rem;
   margin: 4rem 0 5rem 0;
   gap: 7rem;
   align-items: center;
@@ -11,7 +11,8 @@
     display: flex;
     flex-direction: column;
     align-items: flex-start;
-    gap: 1rem;
+    gap: 0.8rem;
+    color: var(--text);
 }
 
 .About h3{
@@ -19,6 +20,9 @@
     font-weight: 700;
 }
 
+.aboutContent{
+  color: var(--text);
+}
 
 .highlight{
     position:relative;
@@ -31,7 +35,7 @@
     top:0em;
     border-width:2px;
     border-style:solid;
-    border-color:darkblue;
+    border-color:var(--highlight-color);
     position:absolute;
     border-right-color:transparent;
     width:100%;
@@ -48,7 +52,7 @@
     top:0em;
     border-width:2px;
     border-style:solid;
-    border-color:darkblue;
+    border-color:var(--highlight-color);
     border-left-color:transparent;
     border-top-color:transparent;
     position:absolute;

@@ -3,6 +3,7 @@ import Profile from "@/Components/Profile/Profile";
 import About from "@/Components/About/About";
 import Contact from "@/Components/ContactNew/Contact";
 import Project from "@/Components/ProjectDisplay/Project";
+import Skills from "@/Components/Skills/Skills";
 import Head from "next/head";
 
 export default function Home() {
@@ -28,6 +29,7 @@ export default function Home() {
       <About/>
       <Project />
       <Contact />
+      {/* <Skills /> */}
     </>
   );
 }
