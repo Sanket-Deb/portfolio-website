@@ -12,11 +12,22 @@
     justify-content: flex-start;
     align-items: baseline;
     width: max-content;
+
 }
 
 .anchor {
     display: flex;
     align-items: center;
+}
+
+.individualIcon{
+    font-size: 35px;
+    color: var(--text);
+    transition: opacity 0.3s ease;
+}
+.individualIcon:hover{
+    cursor: pointer;
+    opacity: 0.45;
 }
 
 .lockButton {
@@ -28,7 +39,21 @@
     position: relative; /* Adjust this if needed */
 }
 
+.lockIcon{
+    color: var(--text);
+}
+.lockIcon:hover{
+    cursor: pointer;
+    transition: opacity 0.3s ease;
+    opacity: 0.45;
+}
+
 @media (max-width: 480px){
     /* mobile */
-
+    .individualIcon{
+        font-size: 24px;
+    }
+    .lockIcon{
+        font-size: 20px;
+    }
 }

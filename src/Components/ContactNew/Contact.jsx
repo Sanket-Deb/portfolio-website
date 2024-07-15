@@ -40,14 +40,21 @@ const [videoPopup, setVideoPopup] = useState(false);
     });
   
   if ( inputName === "username"){
-    setNameError(value.trim() === "" || !/^[a-zA-Z\s]+$/.test(value)? true : false);
+    if (value.trim() === "") {
+      setNameError(false);
+    } else {
+      setNameError(!/^[a-zA-Z\s]+$/.test(value));
     }
+  }
 
   if( inputName === "email"){
-    setEmailError(value.trim() === "''" || !validateEmail(value) ?
-    true : false);
+    if (value.trim() === "") {
+      setEmailError(false);
+    } else {
+      setEmailError(!validateEmail(value));
     }
-  };
+  }
+};
 
   const validateEmail = (email)=>{
     const re = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
@@ -162,9 +169,9 @@ const [videoPopup, setVideoPopup] = useState(false);
               <form className={zilla.className +" "+styles.FormBox} onSubmit={handleSubmit}>
                 <div className={styles.FormInput}>
                   <input className={styles.UsernameInput} type="text" id="username" name="username"  placeholder="Enter your name" required value={formData.username} onChange={handleChange}/>
-                  <p className={styles.ErrorMessage} style={{visibility:nameError? "visible" : "hidden"}}>Please enter a valid string.</p>
+                  <p className={styles.inputErrorMessage} style={{visibility:nameError? "visible" : "hidden"}}>Please enter a valid string.</p>
                   <input className={styles.EmailInput}  type="email" id="email" name="email" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$" placeholder="Enter your email" required value={formData.email} onChange={handleChange}/>
-                  <p className={styles.ErrorMessage} style={{visibility:emailError? "visible" : "hidden"}}>Please enter a valid email.</p>
+                  <p className={styles.inputErrorMessage} style={{visibility:emailError? "visible" : "hidden"}}>Please enter a valid email.</p>
                 </div>
                 <textarea id="message" name="message" placeholder="Shoot your message!" required value={formData.message} onChange={handleChange}/>
                 <Tooltip title={!isFormValid? "Fill the fields above to send message":""}>

@@ -2,21 +2,44 @@
 @tailwind components;
 @tailwind utilities;
 
+
+/*
+ * Dark mode theme 
+ */
+ :root[data-theme='dark'] {
+	--bg-main: hsl(228, 28%, 20%);
+	--header-bg:		hsl(228, 34%, 66%);
+	--text: 		hsl(0, 0%, 100%);
+  --arora-bg: linear-gradient(45deg, rgba(0, 102, 255, 0.7), rgba(0, 204, 255, 0.5), rgba(153, 255, 255, 0.3));
+  --hover-color: blue;
+	--highlight-color: blue;
+	/* Asks browser to behave in dark mode */
+	color-scheme: dark;
+} 
+
+/*
+ * Light mode theme 
+ */
+:root[data-theme='light'] {
+	--bg-main: hsl(0, 0%, 100%);
+	--header-bg:		hsl(0, 0%, 100%);
+	--text: 		hsl(230, 17%, 14%);
+  --arora-bg: linear-gradient(45deg, rgba(0, 255, 255, 0.696), rgba(190, 255, 141, 0.629), rgba(255, 247, 164, 0.322));
+  --hover-color: rgb(71, 195, 71);
+  --highlight-color: darkblue;
+}
+
 :root {
  scroll-behavior: smooth;
-
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
 
-  }
-}
 
 #main {
   padding: 0 15rem 0 15rem;
   max-width: 1800px;
   margin: auto;
+  
 }
 /* large screens  */
 @media (max-width: 1400px){ 
@@ -37,7 +60,7 @@
 }
 
 body {
-  /* padding: 0 15rem 0 15rem; */
+  background-color: var(--bg-main);
 }
 
 .northern-lights {
@@ -69,7 +92,7 @@ body {
   position: fixed;
   width: 200%;
   height: 200%;
-  background: linear-gradient(45deg, rgba(0, 255, 255, 0.696), rgba(190, 255, 141, 0.629), rgba(255, 247, 164, 0.322));
+  background: var(--arora-bg);
   opacity: 0.6;
   filter: blur(100px);
   transition: 0.4s ease;

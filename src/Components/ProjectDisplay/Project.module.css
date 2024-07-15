@@ -10,7 +10,7 @@
 .PageTitle{
     display: flex;
     flex-direction: column;
-
+    color: var(--text);
 }
 .PageTitle h3{
     font-size: 6rem;
@@ -38,16 +38,15 @@
 .ProjectTitle{
     font-size: 1.5rem;
     font-weight: 600;
+    color: var(--text);
 }
 
 .ProjectImage{
-    border: solid;
-    border-color: grey;
     border-radius: 8px;
 }
-/* .ProjectDescription{
-    padding: 0 3rem;
-} */
+.ProjectDescription{
+    color: var(--text);
+}
 
 .ButtonContainer{
     position: absolute;
@@ -70,9 +69,10 @@
     background-color: #365463;
     color: white;
     width: 100%;
+    transition: opacity 0.3s ease;
 }
 
-.ProjectButtons button:hover{
+.ProjectButtons:hover{
     cursor: pointer;
     opacity: 0.75;
 }
@@ -85,7 +85,13 @@
     background-color: #365463;
     color: white;
     padding: 10px;
+    transition: opacity 0.3s ease;
 }
+.ProjectControls:hover{
+    cursor: pointer;
+    opacity: 0.75;
+}
+
 .buttonsWrapper{
     display: flex;
     gap: 0.5rem;

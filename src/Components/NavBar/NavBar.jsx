@@ -1,5 +1,6 @@
 import React from 'react';
 import styles from './NavBar.module.css';
+import DarkMode from '../DarkMode/DarkMode';
 import { Roboto } from 'next/font/google';
 
 const roboto = Roboto ({
@@ -15,6 +16,7 @@ const NavBar = () => {
         <a href="#about">ABOUT</a>
         <a href="#projects" >PROJECTS</a> 
         <a href="#contact">CONTACT</a> 
+        <DarkMode />
       </div>
     </nav>
   )

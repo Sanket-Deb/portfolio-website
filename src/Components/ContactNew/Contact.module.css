@@ -9,7 +9,7 @@
     justify-content:center;
     align-items: center;
     gap: 2rem;
-    padding: 2rem 3rem;
+    padding: 2rem 3rem 3.5rem 3rem;
     width: 100%;
     box-shadow: rgba(0, 0, 0, 0.4) 0px 2px 8px, rgba(0, 0, 0, 0.3) 0px 7px 13px -3px, rgba(0, 0, 0, 0.2) 0px -3px 0px inset;
     border-radius: 10px;
@@ -19,6 +19,7 @@
     display: flex;
     flex-direction: column;
     align-items: center;
+    color: var(--text);
 }
 .ContactTitle h3{
     font-size: 3rem;
@@ -36,6 +37,7 @@
 .InfoBox{
     display: flex;
     flex-direction: column;
+    justify-content: space-between;
     align-items: flex-start;
     gap: 2.5rem;
 }
@@ -48,6 +50,7 @@
     gap: 1rem;
     align-items: center;
     background-color: #cacfd145;
+    color: var(--text);
 }
 .InfoItem h3{
     font-weight: bold;
@@ -59,6 +62,7 @@
     display: flex;
     flex-direction: column;
     width: 100%;
+    /* color: var(--text); */
 }
 .FormInput {
     gap: 0.5rem;
@@ -69,33 +73,37 @@
 .UsernameInput{
     width: 100%;
     padding: 0.8rem;
-    border: solid;
+    border: 1px solid grey;
     border-color: grey;
     border-radius: 5px;
     font-size: 1rem;
-
+    background: whitesmoke;
+    color: black;
 }
 
 .EmailInput{
     width: 100%;
     padding: 0.8rem;
-    border: solid;
+    border: 1px solid grey;
     border-color: grey;
     border-radius: 5px;
     font-size: 1rem;
-
+    background: whitesmoke;
+    color: black;
 }
 
 .FormBox textarea {
     margin-top: 0.5rem;
     width: 100%;
     padding: 0.8rem;
-    border: solid;
+    border: 1px solid grey;
     border-color: grey;
     border-radius: 5px;
     font-size: 1rem;
     height: 145px;
     resize: none;
+    background: whitesmoke;
+    color: black;
 }
 
 .DisabledSendMessage{
@@ -133,7 +141,7 @@
 }
 
 
-.ErrorMessage {
+.inputErrorMessage {
     color: red;
     font-size: 1rem;
     /* margin-top: 0.5rem; */
@@ -170,12 +178,13 @@
     padding: 0.5rem 1rem;
     border: none;
     border-radius: 4px;
-    background-color: #f0f0f0;
+    background-color: grey;
     cursor: pointer;
+    transition: opacity 0.3s ease;
   }
   
   .Popup button:hover {
-    background-color: #e0e0e0;
+    opacity: 0.75;
   }
 
 .Btnmessage{
@@ -208,21 +217,24 @@
     flex-direction: column;
     align-items: center;
     justify-content: center;
+    background-color: var(--header-bg);
 }
 .videoPopup span{
     font-size: 1.5rem;
     font-weight: 800;
+    color: (--text);
 }
 .videoPopup button{
     margin-top: 1rem;
     padding: 0.5rem 1rem;
     border: none;
     border-radius: 4px;
-    background-color: #f0f0f0;
+    background-color: grey;
     cursor: pointer;
+    transition: opacity 0.3s ease;
 }
 .videoPopup button:hover {
-    background-color: #e0e0e0;
+    opacity: 0.45;
   }
 
 

@@ -5,7 +5,7 @@ import { Zilla_Slab, Roboto } from 'next/font/google';
 import DvrIcon from '@mui/icons-material/Dvr';
 import GitHubIcon from '@mui/icons-material/GitHub';
 import ProjectImg from '../../../public/images/bitmoji_projectsNew2.png'
-import SocialsImg from '../../../public/images/project_socialsNew2.jpg';
+import SocialsImg from '../../../public/images/project_socialsNew.jpg';
 import FrontendImg from '../../../public/images/project_frontend.jpg';
 import DrowsinessImg from '../../../public/images/project_drowsinessNew.jpg';
 import SkipNextIcon from '@mui/icons-material/SkipNext';
