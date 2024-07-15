@@ -12,7 +12,7 @@
 	--text: 		hsl(0, 0%, 100%);
   --arora-bg: linear-gradient(45deg, rgba(0, 102, 255, 0.7), rgba(0, 204, 255, 0.5), rgba(153, 255, 255, 0.3));
   --hover-color: blue;
-	--highlight-color: blue;
+	--highlight-color: lightblue;
 	/* Asks browser to behave in dark mode */
 	color-scheme: dark;
 } 
