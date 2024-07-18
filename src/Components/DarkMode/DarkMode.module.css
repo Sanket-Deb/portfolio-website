@@ -1,3 +1,6 @@
 .darkModeToggle{
     cursor: pointer;
 }
+.darkModeToggle:hover{
+    opacity: 0.75;
+}

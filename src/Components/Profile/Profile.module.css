@@ -20,7 +20,7 @@
     z-index: 1;
     left: 312px;
     transition: 0.4s ease;
-    background:rgba(193, 197, 239, 0.94);
+    background:var(--click-color);
     padding: 0.3rem;
     border-radius: 5px;
     width: 180px;
@@ -44,7 +44,7 @@ opacity: 0.6;
     }
     .phoneClickMe{
         display: block;
-        background:rgba(210, 214, 254, 0.427);
+        background:var(--click-color);
         padding: 0.3rem;
         border-radius: 5px;
         width: 180px;

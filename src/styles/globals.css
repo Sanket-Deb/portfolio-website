@@ -13,6 +13,7 @@
   --arora-bg: linear-gradient(45deg, rgba(0, 102, 255, 0.7), rgba(0, 204, 255, 0.5), rgba(153, 255, 255, 0.3));
   --hover-color: blue;
 	--highlight-color: lightblue;
+  --click-color:rgba(193, 197, 239, 0.94);
 	/* Asks browser to behave in dark mode */
 	color-scheme: dark;
 } 
@@ -27,6 +28,7 @@
   --arora-bg: linear-gradient(45deg, rgba(0, 255, 255, 0.696), rgba(190, 255, 141, 0.629), rgba(255, 247, 164, 0.322));
   --hover-color: rgb(71, 195, 71);
   --highlight-color: darkblue;
+  --click-color:rgba(193, 239, 197, 0.94);
 }
 
 :root {
