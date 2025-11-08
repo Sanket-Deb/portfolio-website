@@ -35,7 +35,7 @@ const Profile = () => {
       document.getElementById("clickMe").style.zIndex = "1";
       setTimeout(() => {
         document.getElementById("clickMe").textContent =
-          "Click Me for Magic 👆";
+          "Click Me for Magic 👈👈";
       }, 500);
     }
   }, [audio]);
@@ -51,7 +51,7 @@ const Profile = () => {
             lockSoundRef.current.play();
           }}
         >
-          Kyu nehi bol rahe ho 😒
+          Click Me for Magic 👈👈
         </button>
         <Image
           src={ProfileImg}
